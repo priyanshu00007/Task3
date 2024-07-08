@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TableComponent.module.css */
+.hoverRow:hover {
+    background-color: #e0f7fa;
+  }
+  

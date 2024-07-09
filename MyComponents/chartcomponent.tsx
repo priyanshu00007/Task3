@@ -15,10 +15,13 @@ const ChartComponent = () => {
         console.log(data);
 
         if (data && data.data) {
-          const processedData = data.data.map(item => ({
+          let processedData = data.data.map(item => ({
             date: item.date,
             value: parseFloat(item.value.replace('k', '')) * 1000 // Convert '170k' to 170000
           }));
+
+          // Limit the data to the first 200 items
+          processedData = processedData.slice(0, 200);
 
           setChartData(processedData);
         } else {
@@ -52,7 +55,8 @@ const ChartComponent = () => {
           return val.toFixed(2); 
         }
       }
-    }
+    },
+    colors: ['#0000FF'] // Set the color of the series to blue
   };
 
   const series = [

@@ -4,9 +4,12 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from 
 
 const UserTables = () => {
   return (
-    <div className="overflow-x-auto">
-      <Table removeWrapper aria-label="Example static collection table" className="min-w-full">
-        <TableHeader>
+    <div className="overflow-x-auto p-5">
+      <Table removeWrapper aria-label="Example static collection table" className="min-w-full" classNames={{
+        "table":"bg-gray-200"
+        // "thead":"bg-blue-500"
+      }}>
+        <TableHeader >
           <TableColumn className="whitespace-nowrap">Broker</TableColumn>
           <TableColumn className="whitespace-nowrap">No of Active position</TableColumn>
           <TableColumn className="whitespace-nowrap">Available Capital</TableColumn>

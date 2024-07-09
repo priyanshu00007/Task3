@@ -5,13 +5,12 @@ import { AcmeLogo } from "./AcmeLogo";
 
 export default function App() {
   return (
-    <Navbar className="flex flex-wrap p-4">
+    <Navbar className="flex flex-wrap p-4 bg-gray-200 ">
       <NavbarBrand className="flex items-center">
         <AcmeLogo />
-        <p className="font-bold text-inherit ml-2">ACME</p>
+        <p className="font-bold text-inherit ml-2 text-2xl">Logo</p>
       </NavbarBrand>
-
-      <NavbarContent className=" sm:flex gap-4 text-black" justify="center">
+      <NavbarContent className=" hidden sm:flex gap-4 text-black" justify="center">
         <NavbarItem  >
           <Link color="foreground" href="#">
             Dashboard
@@ -33,7 +32,6 @@ export default function App() {
           </Link>
         </NavbarItem>
       </NavbarContent>
-
       <NavbarContent as="div" justify="end" className="flex items-center">
         <NavbarItem className="mr-4">
           <Link color="foreground" href="#">
@@ -69,6 +67,8 @@ export default function App() {
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>
+
+
     </Navbar>
   );
 }

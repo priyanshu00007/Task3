@@ -13,6 +13,10 @@ const config: Config = {
   theme: {
       extend: {},
     },
+    color:{
+        red1:"F5F9FF",
+        blue1:"E2ECFC"
+    },
     darkMode: "class",
     plugins: [nextui()],
 };

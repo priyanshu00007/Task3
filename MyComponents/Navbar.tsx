@@ -2,10 +2,12 @@
 import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo";
+import Image from "next/image"
+import image from "@/app/bell_icon-removebg-preview.png"
 
 export default function App() {
   return (
-    <Navbar className="flex flex-wrap p-4 bg-gray-200 ">
+    <Navbar className="flex flex-wrap flex-between p-4 bg-gray-200 ">
       <NavbarBrand className="flex items-center">
         <AcmeLogo />
         <p className="font-bold text-inherit ml-2 text-2xl">Logo</p>
@@ -33,11 +35,9 @@ export default function App() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent as="div" justify="end" className="flex items-center">
-        <NavbarItem className="mr-4">
           <Link color="foreground" href="#">
-            bellicon
+            <Image src={image} width={30} height={30} />
           </Link>
-        </NavbarItem>
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Avatar

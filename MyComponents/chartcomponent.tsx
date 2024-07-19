@@ -46,13 +46,20 @@ const ChartComponent = () => {
       type: 'datetime',
       categories: chartData.map(item => new Date(item.date).getTime())
     },
+    yaxis: {
+      labels: {
+        formatter: function (val) {
+          return val >= 1000 ? (val / 1000).toFixed(2) + 'k' : val.toFixed(2);
+        }
+      }
+    },
     tooltip: {
       x: {
         format: 'dd MMM yyyy'
       },
       y: {
         formatter: function (val) {
-          return val.toFixed(2); 
+          return val >= 1000 ? (val / 1000).toFixed(2) + 'k' : val.toFixed(2);
         }
       }
     },
